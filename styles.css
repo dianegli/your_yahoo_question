@@ -1,0 +1,43 @@
+
+body {
+	background-color: #EBFBFF;
+	font-family: 'Hind Siliguri', sans-serif;
+}
+
+
+#button_color {
+  background-color: #FFD2C9;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#title {
+	margin-top: 3em;
+	margin-left: 2em;
+	margin-right: 2em;
+
+}
+
+#form_id {
+	margin-top: 50px;
+}
+
+
+#text_w {
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+#out {
+	margin-top: 1em;
+	margin-left:auto;
+  	margin-right:auto;
+  	background-color: #202D5A;
+  	color: white;
+}
