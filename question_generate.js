@@ -1,15 +1,14 @@
-
 function validation() {
 
-    var name = document.getElementById("name").value;
+    var name = document.getElementById("name").value.toLowerCase().replace(/\s+/g, '');
     var fav = document.getElementById("fav").value;
 
     if (name === '' || fav === '') {
         alert("Please fill all fields!");
         return false;
     } else if (!(/^[a-zA-Z]+$/.test(name))) {
-	    alert("Please make sure your name only contains letters");
-	    return false;
+        alert("Please make sure your name only contains letters");
+        return false;
     } else if (isNaN(fav)) {
         alert("Please input in a number");
         return false;
@@ -21,29 +20,52 @@ function validation() {
 
 function submit_by_id() {
 
-    var name = document.getElementById("name").value.toLowerCase();
+    var name = document.getElementById("name").value.toLowerCase().replace(/\s+/g, '');
 
     //var name_len = name.length;
 
-    function letterValue(str){
-    var anum={
-        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, 
-        l: 12, m: 13, n: 14,o: 15, p: 16, q: 17, r: 18, s: 19, t: 20, 
-        u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
-    }
-    if(str.length== 1) return anum[str] || ' ';
+    function letterValue(str) {
+        var anum = {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            e: 5,
+            f: 6,
+            g: 7,
+            h: 8,
+            i: 9,
+            j: 10,
+            k: 11,
+            l: 12,
+            m: 13,
+            n: 14,
+            o: 15,
+            p: 16,
+            q: 17,
+            r: 18,
+            s: 19,
+            t: 20,
+            u: 21,
+            v: 22,
+            w: 23,
+            x: 24,
+            y: 25,
+            z: 26
+        }
+        if (str.length == 1) return anum[str] || ' ';
 
-    return str.split('').map(letterValue);
-   };
+        return str.split('').map(letterValue);
+    };
 
-   var arr = letterValue(name);
+    var arr = letterValue(name);
 
-   var total = 0; 
-	for(var i in arr){
-	total += parseInt(arr[i]);
-	};
+    var total = 0;
+    for (var i in arr) {
+        total += parseInt(arr[i]);
+    };
 
-	var name_len = total;
+    var name_len = total;
 
     var fav = document.getElementById("fav").value;
 
@@ -80,5 +102,3 @@ function submit_by_id() {
     }
 
 };
-
-
