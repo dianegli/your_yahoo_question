@@ -4,6 +4,7 @@ body {
 	font-family: 'Hind Siliguri', sans-serif;
 }
 
+/*html { -webkit-text-size-adjust: none; }*/
 
 #button_color {
   background-color: #FFD2C9;
@@ -17,9 +18,10 @@ body {
 }
 
 #title {
-	margin-top: 3em;
-	margin-left: 2em;
-	margin-right: 2em;
+	margin-top: 2em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	font-size: 2em;
 
 }
 
